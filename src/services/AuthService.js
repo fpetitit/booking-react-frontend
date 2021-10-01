@@ -20,6 +20,14 @@ class AuthService {
     localStorage.removeItem("userInfo");
     return axios.post(API_BASE_URL + 'logout', {}, this.getAuthHeader());
   }
+
+  fetchUserInfos() {
+    return axios.get(
+      `${API_BASE_URL}profile`,
+      {
+        headers: { Authorization: `Bearer ${localStorage.getItem('access_token')}` }
+      });
+  }
 }
 
 export default new AuthService();
