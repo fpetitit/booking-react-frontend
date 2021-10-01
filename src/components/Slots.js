@@ -89,7 +89,7 @@ const Slots = () => {
               >
                 <TableCell align="right">{slot.start_time}</TableCell>
                 <TableCell align="right">{slot.room_name}</TableCell>
-                <TableCell align="right">{R.isNil(slot.user_id) | slot.user_id === '' ? <Button size="small" onClick={() => { bookSlot(slot.id) }} variant="contained">Book</Button> : slot.user_id == currentUser.userId ? <Button size="small" onClick={() => { unbookSlot(slot.id) }} variant="contained">Unbook</Button> : <Button disabled size="small" onClick={() => { }} variant="contained">Unavailable</Button>}</TableCell>
+                <TableCell align="right">{R.isNil(slot.user_id) | slot.user_id === '' ? <Button size="small" onClick={() => { bookSlot(slot.id) }} variant="contained">Book</Button> : slot.user_id == currentUser.id ? <Button size="small" onClick={() => { unbookSlot(slot.id) }} variant="contained">Unbook</Button> : <Button disabled size="small" onClick={() => { }} variant="contained">Unavailable</Button>}</TableCell>
               </TableRow>
             ))}
           </TableBody>
