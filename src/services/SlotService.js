@@ -1,4 +1,3 @@
-import { AccordionSummary } from '@material-ui/core';
 import axios from 'axios';
 
 const API_BASE_URL = 'http://localhost:3000/';
